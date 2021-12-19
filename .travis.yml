@@ -1,0 +1,24 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t megajon/megajon-web-api -f ./Dockerfile .
+
+script:
+  - docker run -e CI=true megajon/megajon-web-api npm  test -- --coverage
+
+deploy:
+  provider: heroku
+  api_key: $HEROKU_API_KEY
+deploy:
+  # provider: elasticbeanstalk
+  # region: 'us-east-1'
+  # app: 'megajon-web-api'
+  # env: 'Megajonwebapi-env'
+  # bucket_name: 'elasticbeanstalk-us-east-1-952519373382'
+  # bucket_path: 'megajon-web-api'
+  # on:
+  #   branch: master
+  # access_key_id: $AWS_ACCESS_KEY
+  # secret_access_key: $AWS_SECRET_KEY
