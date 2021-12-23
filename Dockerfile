@@ -9,5 +9,5 @@ RUN npm install
 COPY . .
 
 # Default command
-RUN npm run build
+RUN yarn build
 CMD ["yarn","start"]
