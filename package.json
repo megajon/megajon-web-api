@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "keystone dev",
     "start": "keystone start",
-    "build": "keystone build"
+    "build": "keystone build",
+    "test": "jest --runInBand --testTimeout=60000"
   },
   "dependencies": {
     "@keystone-6/auth": "^1.0.0",
@@ -16,5 +17,8 @@
   },
   "engines": {
     "node": "^14.15 || ^16.13"
+  },
+  "devDependencies": {
+    "jest": "^27.4.5"
   }
 }
