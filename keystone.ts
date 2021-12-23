@@ -32,7 +32,7 @@ export default withAuth(
     session,
     server: {
       // cors: { origin: [`http://api:3000`], credentials: true },
-      port: 3001
+      port: process.env.PORT
     },
   })
 );
