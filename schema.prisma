@@ -23,7 +23,21 @@ model Hero {
   id    String @id @default(cuid())
   name  String @default("")
   title String @default("")
-  image Json?
+  image String @default("")
+}
+
+model Logo {
+  id        String @id @default(cuid())
+  name      String @default("")
+  image_url String @default("")
+  href      String @default("")
+}
+
+model Icon {
+  id        String @id @default(cuid())
+  name      String @default("")
+  image_url String @default("")
+  href      String @default("")
 }
 
 model Post {
