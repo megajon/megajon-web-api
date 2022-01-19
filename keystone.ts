@@ -31,7 +31,7 @@ export default withAuth(
     lists,
     session,
     server: {
-      cors: { origin: [`http://megajonwebclient-env.eba-pvfdcmg8.us-east-1.elasticbeanstalk.com/`], credentials: true },
+      cors: { origin: [`http://www.megajon.com`], credentials: true },
       port: process.env.PORT
     },
   })
